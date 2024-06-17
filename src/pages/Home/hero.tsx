@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Hero from "../../assets/img/hero-homepage.svg";
 import PlayButton from "../../assets/img/icon-play.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,47 +8,61 @@ import Nutritionist1 from "../../assets/img/img-nutritionist-fitri.png";
 import Nutritionist2 from "../../assets/img/img-nutritionist-rien.png";
 import Nutritionist3 from "../../assets/img/img-nutritionist-tri.png";
 import SlidingText from "./slidingText";
+import React, { HTMLProps } from "react";
 
-const NutritionistCard = () => (
-  <div className="">
-    <div className="absolute right-[480px] bottom-0">
-      <Image src={Nutritionist2} alt="" />
-      <div className="p-[10px] text-sm w-min rounded-md bg-white text-text shadow-lg relative bottom-10 right-6">
-        <p className="font-bold mb-3 w-max">
-          Ririn Akmal Sari, SST., MKM{" "}
-          <FontAwesomeIcon
-            icon={faCircleCheck}
-            className="ml-4 text-lg text-success"
-          />
-        </p>
-        <p>Dietsien</p>
-      </div>
-    </div>
-    <div className="absolute right-12 bottom-48">
-      <Image src={Nutritionist1} alt="" />
-      <div className="p-[10px] text-sm w-min rounded-md bg-white text-text shadow-lg relative bottom-10 right-6">
-        <p className="font-bold mb-3 w-max">
-          Fitri Khoriyah, SKM., MKM.{" "}
-          <FontAwesomeIcon
-            icon={faCircleCheck}
-            className="ml-4 text-lg text-success"
-          />
-        </p>
-        <p>Dietsien</p>
-      </div>
-    </div>
-    <div className="absolute right-44 -bottom-28">
-      <Image src={Nutritionist3} alt="" />
-      <div className="p-[10px] text-sm w-min rounded-md bg-white text-text shadow-lg relative bottom-12 left-8">
-        <p className="font-bold mb-2 w-max">
-          Tri Rachmawati, S. Gz{" "}
-          <FontAwesomeIcon
-            icon={faCircleCheck}
-            className="ml-4 text-lg text-success"
-          />
-        </p>
-        <p>Dietsien</p>
-      </div>
+type CardType = {
+  name: string;
+  img: StaticImageData;
+  position: string;
+  name_position: string;
+  img_size?: string;
+};
+
+const nutritionistData: CardType[] = [
+  {
+    img: Nutritionist1,
+    name: "Fitri Khoriyah, SKM., MKM.",
+    position: "right-12 top-[31%]",
+    name_position: "bottom-14 right-8",
+    img_size: "w-56 h-[250px]",
+    // position: "right-12 bottom-40",
+  },
+  {
+    img: Nutritionist2,
+    name: "Ririn Akmal Sari, SST., MKM",
+    position: "right-[480px] -bottom-10",
+    name_position: "bottom-10 right-6",
+    img_size: "w-[294px] h-[345px]",
+  },
+  {
+    img: Nutritionist3,
+    name: "Tri Rachmawati, S. Gz",
+    position: "right-44 -bottom-24",
+    name_position: "bottom-12 left-8",
+    img_size: "w-52 h-[235px]",
+  },
+];
+
+const NutritionistCard = ({
+  name,
+  img,
+  position,
+  name_position,
+  img_size,
+}: CardType) => (
+  <div className={`${position} absolute`}>
+    <Image src={img} alt={name} className={img_size} />
+    <div
+      className={`${name_position} p-[10px] text-sm w-min rounded-md bg-white text-text shadow-lg relative`}
+    >
+      <p className="font-bold mb-2 w-max">
+        {name}
+        <FontAwesomeIcon
+          icon={faCircleCheck}
+          className="ml-4 text-lg text-success"
+        />
+      </p>
+      <p>Dietsien</p>
     </div>
   </div>
 );
@@ -66,8 +80,17 @@ const PageHero = () => (
             Daftar Konsultasi
           </button>
         </div>
-        <div>
-          <NutritionistCard />
+        <div className="">
+          {nutritionistData.map((nutritionist, index) => (
+            <NutritionistCard
+              key={index}
+              img={nutritionist.img}
+              name={nutritionist.name}
+              position={nutritionist.position}
+              name_position={nutritionist.name_position}
+              img_size={nutritionist.img_size}
+            />
+          ))}
         </div>
       </div>
       <div>

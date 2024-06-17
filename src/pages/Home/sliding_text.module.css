@@ -1,38 +1,14 @@
 .slidingTextWrapper {
-  height: 180px;
+  height: 190px;
   overflow: hidden;
 }
 
 .slidingText {
-  animation-name: change;
-  animation-duration: 16s;
-  animation-iteration-count: infinite;
-  /* animation: change 16s ease-in-out infinite; */
+  animation: change 17s forwards infinite;
   align-content: center;
 }
 
 @keyframes change {
-  /* 0% {
-    transform: translate3d(0, 100%, 0);
-  } */
-
-  /* paling bawah */
-  /* 100% {
-    transform: translate3d(0, -340%, 0);
-  }
-
-  25% {
-    transform: translate3d(0, -30%, 0);
-  }
-
-  50% {
-    transform: translate3d(0, -70%, 0);
-  }
-
-  75% {
-    transform: translate3d(0, -120%, 0);
-  } */
-
   0%,
   12.66% {
     transform: translate3d(0, 0, 0);
@@ -45,7 +21,7 @@
 
   33.32%,
   45.98% {
-    transform: translate3d(0, -230%, 10px);
+    transform: translate3d(0, -225%, 0);
   }
 
   49.98%,
@@ -53,10 +29,12 @@
     transform: translate3d(0, -340%, 0);
   }
 
+  66.20%,
+  78.86% {
+    transform: translate3d(0, -460%, 0);
+  }
+
   100% {
-    transform: translate3d(0, -300%, 0);
-    /* FIX */
-    /* transform: translate3d(0, -340%, 0); */
-    background-color: yellowgreen;
+    transform: translate3d(0, -460%, 0);
   }
 }

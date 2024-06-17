@@ -1,29 +1,13 @@
-import { useEffect, useRef, useState } from "react";
 import styles from "./sliding_text.module.css";
-import { setInterval } from "timers";
 
 const SlidingText = () => {
-  const [text, setText] = useState("");
-
   const titles = [
     "Arahan Konsultasi Gizi yang Personal",
     "Diet Sehat Mu",
     "Perencanaan Menu Makan Mu",
     "Rutinitas Lama dengan Kebiasaan Baru",
+    "Arahan Konsultasi Gizi yang Personal",
   ];
-
-  const maps = () => {
-    titles.map((e, i) => setText(e));
-  };
-
-  const test = () => {
-    setInterval(() => map(), 1000);
-  };
-
-  useEffect(() => {
-    // test();
-    // console.log(text);
-  }, []);
 
   return (
     <div className={styles.slidingTextWrapper}>
