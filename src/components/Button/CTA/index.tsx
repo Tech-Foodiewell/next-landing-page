@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 type CTAButtonType = {
   isOutlined?: boolean;
   children: ReactNode;
-  className: string;
+  className?: string;
   onClick?: () => void;
 };
 

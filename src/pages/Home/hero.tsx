@@ -1,22 +1,12 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Hero from "../../assets/img/hero-homepage.svg";
 import PlayButton from "../../assets/img/icon-play.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleCheck } from "@fortawesome/free-solid-svg-icons/faCircleCheck";
 
+import NutritionistCard, { CardType } from "@/components/Card/NutritionistCard";
 import Nutritionist1 from "../../assets/img/img-nutritionist-fitri.png";
 import Nutritionist2 from "../../assets/img/img-nutritionist-rien.png";
 import Nutritionist3 from "../../assets/img/img-nutritionist-tri.png";
 import SlidingText from "./slidingText";
-import React, { HTMLProps } from "react";
-
-type CardType = {
-  name: string;
-  img: StaticImageData;
-  position: string;
-  name_position: string;
-  img_size?: string;
-};
 
 const nutritionistData: CardType[] = [
   {
@@ -42,30 +32,6 @@ const nutritionistData: CardType[] = [
     img_size: "w-52 h-[235px]",
   },
 ];
-
-const NutritionistCard = ({
-  name,
-  img,
-  position,
-  name_position,
-  img_size,
-}: CardType) => (
-  <div className={`${position} absolute`}>
-    <Image src={img} alt={name} className={img_size} />
-    <div
-      className={`${name_position} p-[10px] text-sm w-min rounded-md bg-white text-text shadow-lg relative`}
-    >
-      <p className="font-bold mb-2 w-max">
-        {name}
-        <FontAwesomeIcon
-          icon={faCircleCheck}
-          className="ml-4 text-lg text-success"
-        />
-      </p>
-      <p>Dietsien</p>
-    </div>
-  </div>
-);
 
 const PageHero = () => (
   <>

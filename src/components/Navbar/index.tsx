@@ -6,6 +6,7 @@ import Dropdown from "../Dropdown";
 import { useEffect, useRef, useState } from "react";
 import WhatsAppButton from "../Button/CTA";
 import CTAButton from "../Button/CTA";
+import Link from "next/link";
 
 const Navbar = () => {
   useEffect(() => {
@@ -32,16 +33,16 @@ const Navbar = () => {
       id="navbar"
       className="transition-colors bg-white navbar sticky top-0 flex justify-between items-center px-12 py-8 shadow-2 border rounded-b-[16px] backdrop-blur-md z-50 hover:bg-white"
     >
-      <div>
+      <Link href="/">
         <Image style={{ width: 103 }} src={FoodiewellLogo} alt="" />
-      </div>
+      </Link>
       <div className="">
         {/* to render navbar links */}
-        <ul className="flex gap-x-16">
+        <div className="flex gap-x-16">
           {nabvarLinks.map((link, i) => (
             <Dropdown key={i} items={link} />
           ))}
-        </ul>
+        </div>
       </div>
       <CTAButton isOutlined={false}>
         <p className="flex">

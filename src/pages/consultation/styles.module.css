@@ -1,0 +1,13 @@
+.ConsultationWrapper {
+  margin-top: -100px;
+  padding-top: 30px;
+  background-image: url("./../../assets/img/img-bg-plain.png");
+  background-size: 100% 120%;
+  height: 784px;
+  display: flex;
+  align-items: center;
+}
+
+.Card {
+  background: linear-gradient(to left, #ffcc80, #fffde7);
+}

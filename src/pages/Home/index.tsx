@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import PageHero from "./hero";
 import NutritionistList from "./nutritionist";
 import Programs from "./programs";
@@ -11,7 +10,6 @@ const Homepage = () => {
       <Partneship />
       <Programs />
       <NutritionistList />
-      <Footer />
     </div>
   );
 };

@@ -1,20 +1,31 @@
 import Image from "next/image";
-import Chat from "../../assets/img/icon-chat.svg";
-import Person from "../../assets/img/icon.person-star.svg";
-import Message from "../../assets/img/icon-message.svg";
 import Building from "../../assets/img/icon-building.svg";
-import Shapes from "../../assets/img/icon-shapes.svg";
+import Chat from "../../assets/img/icon-chat.svg";
 import Graphic from "../../assets/img/icon-graphic.svg";
+import Message from "../../assets/img/icon-message.svg";
+import Shapes from "../../assets/img/icon-shapes.svg";
+import Person from "../../assets/img/icon.person-star.svg";
+import { useRouter } from "next/router";
 
-const IndividualMenu = (props) => {
-  const { logo, title, icon, iconText, desc } = props;
+type NavbarMenuProps = {
+  logo: string;
+  title: string;
+  icon: string;
+  iconText: string;
+  desc: string;
+  link?: string;
+};
+
+const IndividualMenu = (props: NavbarMenuProps) => {
+  const router = useRouter();
+  const { logo, title, icon, iconText, desc, link } = props;
   return (
-    <a
-      className="bg-white rounded-md border px-5 py-4 flex items-start w-[330px] gap-x-4 hover:bg-surface hover:shadow-2 transition-colors"
-      href=""
+    <div
+      className="bg-white cursor-pointer rounded-md border px-5 py-4 flex items-start w-[330px] gap-x-4 hover:bg-surface hover:shadow-2 transition-colors"
+      onClick={() => router.push(`${link}`)}
     >
       <Image src={logo} alt="" />
-      <div className="">
+      <div onClick={() => router.push(`${link}`)} className="">
         <p className="text-text font-bold">{title}</p>
         <p className="text-primary text-sm my-[6px] flex">
           <Image src={icon} alt="" className="mr-[6px]" />
@@ -22,7 +33,7 @@ const IndividualMenu = (props) => {
         </p>
         <p className="text-sm">{desc}</p>
       </div>
-    </a>
+    </div>
   );
 };
 
@@ -39,6 +50,7 @@ export const nabvarLinks = [
           icon={Person}
           iconText="Individual"
           desc="Raih Pola Makan Sehat dengan Konsultasi Gizi Personal"
+          link="/consultation"
         />
       ),
     },
