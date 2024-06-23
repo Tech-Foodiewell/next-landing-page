@@ -9,8 +9,25 @@ import YoutubeIcon from "../../assets/img/icon-youtube.svg";
 import TiktokIcon from "../../assets/img/icon-tiktok.svg";
 import WhatsAppIcon from "../../assets/img/icon-whatsapp.svg";
 import CTAButton from "../Button/CTA";
+import { useRouter } from "next/router";
 
 const Footer = () => {
+  const router = useRouter();
+
+  const renderFooterText = () => {
+    let text = "";
+
+    switch (router.pathname) {
+      case "/":
+        text = "Siap tingkatkan kualitas hidupmu dengan Foodiewell?";
+        break;
+      default:
+        text = "Ada Pertanyaan? Hubungi Kami";
+    }
+
+    return text;
+  };
+
   return (
     <>
       <div className="mb-20 relative w-auto">
@@ -24,7 +41,7 @@ const Footer = () => {
         <div className="flex flex-col items-center">
           <Image src={FoodiewellIcon} alt="" className="w-10 mb-8" />
           <p className="text-5xl text-center text-text font-bold w-[785px] leading-normal">
-            Siap tingkatkan kualitas hidupmu dengan Foodiewell?
+            {renderFooterText()}
           </p>
         </div>
         <div className="w-auto text-center mt-12">

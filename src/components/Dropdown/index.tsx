@@ -1,15 +1,10 @@
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons/faChevronDown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useState } from "react";
 
 const Dropdown = ({ items }) => {
   const [isOpen, setIsOpen] = useState(false); // State to manage dropdown visibility
-
-  const toggleDropdown = () => setIsOpen(!isOpen); // Function to toggle dropdown state
-
-  useEffect(() => {
-    console.log(isOpen);
-  });
 
   const menuRender = () => {
     if (items.children?.type === "text") {
@@ -22,9 +17,9 @@ const Dropdown = ({ items }) => {
         >
           <div>
             {items.children?.menus?.map((link) => (
-              <a key={link.label} href="">
-                <p className="py-[6px] px-4 text-sm">{link.label}</p>
-              </a>
+              <p key={link.label} className="py-[6px] px-4 text-sm">
+                <Link href="">{link.label}</Link>
+              </p>
             ))}
           </div>
         </div>
@@ -54,22 +49,6 @@ const Dropdown = ({ items }) => {
         ) : null}
       </button>
       {menuRender()}
-      {/* <div
-        onMouseLeave={() => setIsOpen(false)}
-        className={`absolute ${
-          isOpen ? "block" : "hidden"
-        } text-text bg-whit -translate-x-1/4 bg-white rounded-md border top-full mt-4`}
-      >
-        <div>
-          {items.children?.type !== "rich"
-            ? items.children?.menus?.map((link) => (
-                <a key={link.label} href="">
-                  <p className="py-[6px] px-4 text-sm">{link.label}</p>
-                </a>
-              ))
-            : items.children.menus}
-        </div>
-      </div> */}
     </div>
   );
 };

@@ -6,11 +6,17 @@ import Circle from "../../assets/img/img-blur-circle.svg";
 import CTAButton from "@/components/Button/CTA";
 import { useState } from "react";
 
+const dummy =
+  "https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2022/09/22/982389143.jpg";
+
 const NutritionistCard = () => (
   <div className="w-max hover:shadow-md rounded-lg">
     <div>
-      <img
-        className="w-72 h-80 object-cover rounded-t-lg"
+      <Image
+        loader={() => dummy}
+        width={288}
+        height={320}
+        className="h-80 object-cover rounded-t-lg"
         src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2022/09/22/982389143.jpg"
         alt=""
       />
