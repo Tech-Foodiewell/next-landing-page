@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../Footer";
+import Footer from "../Section/Footer";
 import Navbar from "../Navbar";
 
 type LayoutProps = {

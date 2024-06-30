@@ -1,5 +1,4 @@
 import CTAButton from "@/components/Button/CTA";
-import BG from "@/assets/img/img-bg-plain.png";
 import Image from "next/image";
 import styles from "./styles.module.css";
 import PlayButton from "../../assets/img/icon-play.svg";
