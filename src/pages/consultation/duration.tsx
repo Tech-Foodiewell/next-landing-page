@@ -2,7 +2,6 @@ import { Span } from "next/dist/trace";
 import Image from "next/image";
 import Fire from "../../assets/img/icon-fire.svg";
 import Check from "../../assets/img/icon-badge-curly-check.svg";
-import CardBG from "../../assets/img/img-card-bg.svg";
 
 import CTAButton from "@/components/Button/CTA";
 import styles from "./styles.module.css";

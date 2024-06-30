@@ -74,6 +74,7 @@ export const nabvarLinks = [
             icon={Shapes}
             iconText="Individu & Institusi"
             desc="Peran Ibu dalam Menciptakan Keluarga Sehat"
+            link="/gemari"
           />
         </div>
       ),

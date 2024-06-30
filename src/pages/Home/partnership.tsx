@@ -14,11 +14,11 @@ const Partneship = () => (
         <Image className="w-1/5 h-auto" alt="" src={Feelsbox} />
       </div>
     </div>
-    <div className="px-12 leading-10 mb-10 mt-28">
-      <div className="absolute w-[765px] h-[356px] origin-right top-[166%] right-[26.8%] -z-10 bg-[#E3D3FF] text-primary py-8 px-[87px] text-center rounded-[20px]"></div>
-      <div className="absolute w-[765px] h-[356px] origin-right top-[168.8%] right-[26.7%] -z-10 rotate-[5deg] bg-[#D5F3FF] text-primary py-8 px-[87px] text-center rounded-[20px]"></div>
-      <div className="absolute w-[765px] h-[356px] origin-right top-[170.4%] right-[27.7%] -z-10 rotate-[4.3deg] bg-[#F0F3FF] text-primary py-8 px-[87px] text-center rounded-[20px]"></div>
-      <div className="absolute w-[765px] h-[356px] origin-right right-[28.7%] -z-10 rotate-[3.5deg] bg-[#E1FDF5] text-primary py-8 px-[87px] text-center rounded-[20px]"></div>
+    <div className="relative px-12 leading-10 mb-10 mt-56">
+      <div className="absolute w-[765px] h-[356px] origin-right -top-14 right-[11.6%] -z-10 bg-[#E3D3FF] text-primary py-8 px-[87px] text-center rounded-[20px]"></div>
+      <div className="absolute w-[765px] h-[356px] origin-right -top-[7%] right-[11.7%] -z-10 rotate-[4.8deg] bg-[#D5F3FF] text-primary py-8 px-[87px] text-center rounded-[20px]"></div>
+      <div className="absolute w-[765px] h-[356px] origin-right -top-[3%] right-[13%] -z-10 rotate-[4.3deg] bg-[#F0F3FF] text-primary py-8 px-[87px] text-center rounded-[20px]"></div>
+      <div className="absolute w-[765px] h-[356px] origin-right right-[14.7%] top-1 -z-10 rotate-[3.5deg] bg-[#E1FDF5] text-primary py-8 px-[87px] text-center rounded-[20px]"></div>
       <div className="bg-primary_surface relative w-[765px] text-primary py-8 px-[87px] text-center rounded-[20px]">
         <p className="font-bold text-[28px]">
           “Dari yang asalnya abai sama diri sendiri, tapi karena konsul di

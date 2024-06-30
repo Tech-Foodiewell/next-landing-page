@@ -1,14 +1,14 @@
 import Image from "next/image";
-import FoodiewellLogo from "../../assets/img/logo-foodiewell.svg";
-import FoodiewellIcon from "../../assets/img/logo-foodiewell-notext.svg";
-import Circle from "../../assets/img/img-blur-circle.svg";
-import InstagramIcon from "../../assets/img/icon-instagram.svg";
-import LinkedinIcon from "../../assets/img/icon-linkedin.svg";
-import SpotifyIcon from "../../assets/img/icon-spotify.svg";
-import YoutubeIcon from "../../assets/img/icon-youtube.svg";
-import TiktokIcon from "../../assets/img/icon-tiktok.svg";
-import WhatsAppIcon from "../../assets/img/icon-whatsapp.svg";
-import CTAButton from "../Button/CTA";
+import FoodiewellLogo from "../../../assets/img/logo-foodiewell.svg";
+import FoodiewellIcon from "../../../assets/img/logo-foodiewell-notext.svg";
+import Circle from "../../../assets/img/img-blur-circle.svg";
+import InstagramIcon from "../../../assets/img/icon-instagram.svg";
+import LinkedinIcon from "../../../assets/img/icon-linkedin.svg";
+import SpotifyIcon from "../../../assets/img/icon-spotify.svg";
+import YoutubeIcon from "../../../assets/img/icon-youtube.svg";
+import TiktokIcon from "../../../assets/img/icon-tiktok.svg";
+import WhatsAppIcon from "../../../assets/img/icon-whatsapp.svg";
+import CTAButton from "../../Button/CTA";
 import { useRouter } from "next/router";
 
 const Footer = () => {
